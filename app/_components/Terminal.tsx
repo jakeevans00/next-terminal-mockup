@@ -1,6 +1,10 @@
 "use client";
 
 import React, { useState, KeyboardEvent, ChangeEvent } from 'react';
+import Image from "next/image";
+import githubImage from "@/public/image.png";
+import linkedInImage from "@/public/linkedin.png";
+import trashImage from "@/public/trash.png";
 
 const Terminal: React.FC = () => {
   const [input, setInput] = useState<string>('');
@@ -25,7 +29,7 @@ const Terminal: React.FC = () => {
   }
 
   return (
-    <div className="w-full mx-auto bg-black text-white">
+    <div className="w-full mx-auto terminal-color text-white">
       <div className="flex justify-between w-full border-t-[1px] border-indigo-700 p-4">
         <div className='flex flex-row gap-4 '>
           <div className='underline underline-offset-4 decoration-yellow-500'>
@@ -38,8 +42,11 @@ const Terminal: React.FC = () => {
             Problems
           </div>
         </div>
-        <div>
-          <button>Social</button>
+        <div className='flex gap-3'>
+
+          <Image src={githubImage} alt='Github image' width={20} height={20} />
+          <Image src={linkedInImage} alt='Github image' width={20} height={20} />
+          <Image src={trashImage} alt='Github image' width={20} height={20} />
         </div>
 
       </div>
@@ -55,7 +62,7 @@ const Terminal: React.FC = () => {
         <input
           autoFocus
           type="text"
-          className="bg-black text-yellow-500 outline-none flex-grow"
+          className="bg-inherit text-yellow-500 outline-none flex-grow"
           value={input}
           onChange={handleChange}
           onKeyDown={handleKeyUp}

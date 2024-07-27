@@ -3,26 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --text: white;
+  --hero-text: #312e81;
+  --terminal-hex: #a8a6c9;
+  --text: #7777b0;
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-hex: #a7a6cb;
+  --background-start-percentage: 0%;
+  --background-mid-hex: white;
+  --background-mid-percentage: 54%;
+  --background-end-hex: white;
+  --background-end-percentage: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --hero-text: #818cf8;
+    --terminal-hex: black;
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-hex: #130f40;
+    --background-mid-hex: #000000;
+    --background-mid-percentage: 74%;
+    --background-end-hex: #000000;
+    --background-end-percentage: 74%;
   }
 }
 
 body {
   color: var(--text);
   font-family: monospace;
-  /* background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%); */
-  background-color: #130f40;
-  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  /* background-image: linear-gradient(, #a7a6cb 0%, #8989ba 52%, #8989ba 100%); */
+  background-image: linear-gradient(315deg,
+      var(--background-start-hex) var(--background-start-percentage),
+      var(--background-mid-hex) var(--background-mid-percentage),
+      var(--background-end-hex) var(--background-end-percentage));
 }
 
 @layer utilities {
@@ -31,10 +44,10 @@ body {
   }
 }
 
-.ackground {
-  /* this is such a clean light mode */
-  background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
-
+.hero-text {
+  color: var(--hero-text);
 }
 
-
+.terminal-color {
+  background-color: var(--terminal-hex);
+}
