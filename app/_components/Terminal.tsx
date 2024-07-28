@@ -29,9 +29,9 @@ const Terminal: React.FC = () => {
   }
 
   return (
-    <div className="w-full mx-auto terminal-color text-white">
-      <div className="flex justify-between w-full terminal p-4">
-        <div className='flex flex-row gap-4 '>
+    <div className="fixed left-0 bottom-0 w-full terminal-color text-white z-50">
+      <div className="flex justify-between p-4 terminal">
+        <div className='flex gap-4 '>
           <div className='underline underline-offset-4 decoration-yellow-500'>
             Terminal
           </div>
@@ -43,7 +43,6 @@ const Terminal: React.FC = () => {
           </div>
         </div>
         <div className='flex gap-3'>
-
           <Image src={githubImage} alt='Github image' width={20} height={20} />
           <Image src={linkedInImage} alt='Github image' width={20} height={20} />
           <Image src={trashImage} alt='Github image' width={20} height={20} />
@@ -66,7 +65,7 @@ const Terminal: React.FC = () => {
           value={input}
           onChange={handleChange}
           onKeyDown={handleKeyUp}
-          placeholder="Try typing 'help'"
+          placeholder="Try typing 'hello'"
         />
       </div>
     </div>

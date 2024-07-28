@@ -7,7 +7,7 @@ interface FileTreeProps {
 
 const FileTree: React.FC<FileTreeProps> = ({ data }) => {
     return (
-        <div className="mb-4 px-8 overflow-auto swoop-in">
+        <div className="mb-4 px-8 overflow-auto">
             {data.map((node) => (
                 <FileTreeNode key={node.name} node={node} />
             ))}

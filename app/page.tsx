@@ -6,13 +6,15 @@ import Linux from "@/app/_components/Linux";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div>
-        <Linux />
+      <div className="relative flex overflow-y-scroll pt-60 pb-60">
         <FileTree data={fileTreeData} />
-        <Terminal />
+        <Linux />
       </div>
+
+      <Terminal />
+
     </div>
   );
 }
