@@ -1,6 +1,6 @@
 const FileTree = () => {
     return (
-        <div className="mb-4 px-8 overflow-auto">
+        <div className="mb-4 px-8 overflow-auto swoop-in">
             <p>{'>'} bin</p>
             <p>{'>'} dev</p>
             <p>{'>'} etc</p>

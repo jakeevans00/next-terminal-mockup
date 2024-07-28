@@ -30,7 +30,7 @@ const Terminal: React.FC = () => {
 
   return (
     <div className="w-full mx-auto terminal-color text-white">
-      <div className="flex justify-between w-full border-t-[1px] border-indigo-700 p-4">
+      <div className="flex justify-between w-full terminal p-4">
         <div className='flex flex-row gap-4 '>
           <div className='underline underline-offset-4 decoration-yellow-500'>
             Terminal

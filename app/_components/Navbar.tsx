@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <header className="flex justify-between items-center px-12 py-4 w-full">
       <div className="hero-text font-extrabold text-3xl">
-        <span className='underline'>K</span>otz'i'j<span className='text-indigo-200'>.</span><span className='text-yellow-500'>dev</span>
+        <span className='underline'>K</span>otz&apos;i&apos;j<span className='text-indigo-200'>.</span><span className='text-yellow-500'>dev</span>
       </div>
       <nav className="">
         <ul className="flex flex-row gap-6">

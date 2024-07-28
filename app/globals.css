@@ -51,3 +51,62 @@ body {
 .terminal-color {
   background-color: var(--terminal-hex);
 }
+
+.terminal {
+  position: relative;
+}
+
+.terminal:before,
+.terminal:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -1px;
+  background: linear-gradient(45deg, #e746a4, #5d5df4, #7c0aff, #00fffb,
+      #15f59b, #ffbb00, #ff8b10, #c81bb7);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 50s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+
+.swoop-in {
+  position: relative;
+  animation: swoopIn 1.5s ease-out forwards;
+  z-index: -2;
+}
+
+@keyframes swoopIn {
+  0% {
+    transform: translate(-100%, 1000%) rotate(30deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-20%, 400%) rotate(25deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
