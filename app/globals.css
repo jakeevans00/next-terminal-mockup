@@ -63,7 +63,7 @@ body {
   left: -2px;
   top: -1px;
   background: linear-gradient(45deg, #e746a4, #5d5df4, #7c0aff, #00fffb,
-      #15f59b, #ffbb00, #ff8b10, #c81bb7);
+      #15f59b, #ffbb00, #ff8b10, #c81bb7, #e746a4);
   background-size: 400%;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
@@ -85,14 +85,12 @@ body {
   }
 }
 
-.block:after {
-  filter: blur(50px);
+.terminal:after {
+  filter: blur(5px);
 }
 
 .swoop-in {
-  position: relative;
   animation: swoopIn 1.5s ease-out forwards;
-  z-index: -2;
 }
 
 @keyframes swoopIn {
@@ -109,4 +107,24 @@ body {
   100% {
     transform: translate(0, 0) rotate(0);
   }
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.linux {
+  background-color: rgba(118, 116, 116, 0.588);
 }
